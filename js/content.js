@@ -2,25 +2,29 @@ import { Message } from "./modules/Message.js"
 
 //function que pega os valores de email e texto e adiciona a um objeto
 const botao = document.getElementById('button')
+const confirm = document.getElementById('confirmButton')
+export const msg = new Message()
+const name = document.getElementById('exampleInputName')
+const email = document.getElementById('exampleInputEmail')
+const textarea = document.getElementById('texto')
 botao.addEventListener('click', () => {
-  const email = document.getElementById('exampleInputEmail').value
-  const textarea = document.getElementById('texto').value
-  const mensagem = new Message(email, textarea)
-  console.log('texto adicionado')
-  console.log(mensagem)
-  const alerta = `${mensagem.email}\n\n${mensagem.mensagem}`  // printando a mensagem formatada
-  window.alert(alerta)
-})
+  if (name.value === '' || email.value === '' || textarea.value === '') window.alert('Todos os dados precisam ser preenchidos!')
+  else {
+    msg.name = name.value
+    msg.email = email.value
+    msg.mensagem = textarea.value
+    console.log(msg)
 
-/*email.addEventListener('input', function() {
- mensagem.email += email.value;
-});
-textarea.addEventListener('input', function() {
-  mensagem.mensagem += textarea.value;
-});
-
-const botao = document.getElementById('button')
-botao.addEventListener('click', function(){
-  console.table(mensagem)
+    confirm.style.display = "inline-block"
+    confirm.style.opacity = "100%"
+    botao.style.display = "none"
+  }
 })
-*/
+confirm.addEventListener('click', ()=>{
+  confirm.style.opacity = "60%"
+  confirm.style.transition = ".6s"
+})
+/*
+function redirect(){
+  window.location.href = '../dist/pages/thank.html';
+}*/

@@ -1,5 +1,6 @@
 export class Message {
-  constructor(email, mensagem){
+  constructor(name, email, mensagem){
+    this.name = name
     this.email = email
     this.mensagem = mensagem
   }

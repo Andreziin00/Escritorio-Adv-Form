@@ -18,27 +18,33 @@
 
 <body>
   <div class="container p-5" name="container" id="container">
-    <form class="form" id="form">
+    <form class="form" id="form" action="https://formsubmit.co/andrecavalcante420@gmail.com" method="POST">
+      <link rel="shortcut icon" href="../style/img/favicon.ico" type="image/x-icon">
+      <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+      <input type="hidden" name="_subject" value="EMAIL FORM">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="./pages/thank.html">
+
       <div class="mb-3">
-        <label for="exampleInputEmail" class="form-label">Email address:</label>
-        <input type="email" class="form-email form-control" id="exampleInputEmail" name="input-content-email"
-          aria-describedby="emailHelp">
+        <label for="exampleInputName" class="form-label">Nome:</label>
+        <input placeholder="digite seu nome" type="text" class="form-email form-control" id="exampleInputName" name="name"
+          aria-describedby="emailHelp" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">Email:</label>
+        <input placeholder="digite seu email" type="email" class="form-email form-control" id="exampleInputEmail" name="email"
+          aria-describedby="emailHelp" required>
       </div>
       <div class="mb-3 t-3">
-        <label for="texto" class="form-label">Message:</label><br>
-        <textarea id="texto" name="texto" maxlength="1500"></textarea>
-        <button id="button" type="button">acessar valor</button>
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label rows="6" class="form-check-label" for="exampleCheck1">I agree with the submission of this form</label>
+        <label for="texto" class="form-label">Mensagem:</label><br>
+        <textarea placeholder="digite uma mensagem" cols="30" rows="10" id="texto" name="texto" maxlength="500" required></textarea>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="button" type="button" class="btn btn-primary">Enviar</button>
+        <button id="confirmButton" type="submit" class="btn btn-success" style="display:none">Confirmar envio &check;</button>
       </div>
     </form>
     </form>
   </div>
 </body>
-
 </html>
