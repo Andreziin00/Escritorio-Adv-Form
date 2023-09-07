@@ -11,15 +11,3 @@ este formulário é a primeira versão simples da resolução do problema anteri
 ## Demonstração
 
 
-
-
-
-
-
-
-
-
-
-O programa não conta com uma versão resposiva, isto virá posteriormente com uma atualização simples que poderá ser feita em breve. 
-O programa também poderá, posteriormente, contar com a adicão de algumas finalizações front-end e de novos campos de dados para serem processados e enviados ao email se forma simples. 
-
